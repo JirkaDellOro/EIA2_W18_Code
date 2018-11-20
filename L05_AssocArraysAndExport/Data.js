@@ -1,5 +1,6 @@
 var L05_AssocArraysAndExport;
 (function (L05_AssocArraysAndExport) {
+    // Beispieldaten auf Basis der oben angegebenen Strukturen
     L05_AssocArraysAndExport.data = {
         "normal": [
             { text: "Some text here", value: 101, truth: true, words: ["what", "ever"] },
