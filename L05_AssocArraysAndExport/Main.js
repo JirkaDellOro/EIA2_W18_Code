@@ -10,6 +10,8 @@ var L05_AssocArraysAndExport;
         document.body.appendChild(document.createElement("hr"));
         // alle Daten im DOM darstellen
         displayHomoVar(L05_AssocArraysAndExport.data);
+        // Listener für Click installieren
+        document.addEventListener("click", handleClick);
     }
     function displayHomoVar(_homoVar) {
         // mit diesem Schleifenkonstrukt wird über alle Schlüssel iteriert (Typannotation ist hier nicht erlaubt)
@@ -31,13 +33,20 @@ var L05_AssocArraysAndExport;
         let legend = document.createElement("legend");
         // was unter dem Schlüssel text abgelegt ist, wird für die Fieldset-Legende genommen
         legend.innerText = _heteroPredef.text;
-        // was unter value und words zu finden ist, als Inhalt
-        fieldset.innerText = _heteroPredef.value + " | " + _heteroPredef.words;
+        // ...was unter words zu finden ist, als Inhalt...
+        fieldset.innerText = _heteroPredef.words.toString();
+        // ... und was als value eingetragen wird soll das Attribut "result" werden
+        fieldset.setAttribute("result", _heteroPredef.value.toString());
         // und wenn truth wahr ist, soll der Text rot dargestellt werden
         if (_heteroPredef.truth)
             fieldset.style.color = "red";
         fieldset.appendChild(legend);
         document.body.appendChild(fieldset);
+    }
+    function handleClick(_event) {
+        let target = _event.target;
+        if (target.tagName != "fieldset")
+            alert(target.getAttribute("result"));
     }
 })(L05_AssocArraysAndExport || (L05_AssocArraysAndExport = {}));
 //# sourceMappingURL=Main.js.map
