@@ -1,0 +1,15 @@
+{
+	"name" : "Nodetest_W18",
+	"version" : "1.0.0",
+	"description" : "First Node Test",
+	"author" : "Jirka",
+	"main" : "Server.js",
+	"scripts" : {
+		"start" : "node Server.js"
+	},
+	"engines" : {
+		"node" : "8.10.0"
+	},
+	"dependencies" : {
+	}
+}
