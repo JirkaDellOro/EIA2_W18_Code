@@ -1,0 +1,15 @@
+{
+	"name" : "Nodetest",
+	"version" : "1.0.0",
+	"description" : "Node Test",
+	"author" : "Jirka",
+	"main" : "NodeTest.js",
+	"scripts" : {
+		"start" : "node L06_SendData/Server/NodeTest.js"
+	},
+	"engines" : {
+		"node" : "8.10.0"
+	},
+	"dependencies" : {
+	}
+}
