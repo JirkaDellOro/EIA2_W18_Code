@@ -1,5 +1,5 @@
 {
-	"name" : "Mini Server",
+	"name" : "MiniServer",
 	"version" : "1.0.0",
 	"description" : "Minimal server just bouncing the URL",
 	"author" : "Jirka",
