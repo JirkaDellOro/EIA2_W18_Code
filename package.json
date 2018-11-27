@@ -3,9 +3,9 @@
 	"version" : "1.0.0",
 	"description" : "First Node Test",
 	"author" : "Jirka",
-	"main" : "Server.js",
+	"main" : "NodeTest.js",
 	"scripts" : {
-		"start" : "node Server.js"
+		"start" : "node L06_SendData/Server/NodeTest.js"
 	},
 	"engines" : {
 		"node" : "8.10.0"
