@@ -22,7 +22,7 @@ var L07_ReceiveResponse;
         xhr.send();
     }
     function handleStateChange(_event) {
-        var xhr = _event.target;
+        let xhr = _event.target;
         if (xhr.readyState == XMLHttpRequest.DONE) {
             console.log("ready: " + xhr.readyState, " | type: " + xhr.responseType, " | status:" + xhr.status, " | text:" + xhr.statusText);
             console.log("response: " + xhr.response);
