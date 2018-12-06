@@ -1,23 +1,19 @@
-var L06_SendData;
-(function (L06_SendData) {
+var L07_ReceiveResponse;
+(function (L07_ReceiveResponse) {
     window.addEventListener("load", init);
     let address = "http://localhost:8100";
     //let address: string = "https://eia2-nodetest.herokuapp.com";
     function init(_event) {
-        setupColorDivs();
+        setupAsyncForm();
+        //setupColorDivs();
     }
-    function setupColorDivs() {
-        let colors = ["red", "green", "blue"];
-        let divs = document.getElementsByTagName("div");
-        for (let i = 0; i < divs.length; i++) {
-            divs[i].style.backgroundColor = colors[i];
-            divs[i].addEventListener("click", handleClickOnDiv);
-        }
+    function setupAsyncForm() {
+        let button = document.querySelector("[type=button]");
+        button.addEventListener("click", handleClickOnAsync);
     }
-    function handleClickOnDiv(_event) {
-        let style = _event.target.style;
-        console.log(style.backgroundColor);
-        sendRequestWithCustomData(style.backgroundColor);
+    function handleClickOnAsync(_event) {
+        let color = document.querySelector(":checked").value;
+        sendRequestWithCustomData(color);
     }
     function sendRequestWithCustomData(_color) {
         let xhr = new XMLHttpRequest();
@@ -32,5 +28,5 @@ var L06_SendData;
             console.log("response: " + xhr.response);
         }
     }
-})(L06_SendData || (L06_SendData = {}));
+})(L07_ReceiveResponse || (L07_ReceiveResponse = {}));
 //# sourceMappingURL=SendData.js.map
